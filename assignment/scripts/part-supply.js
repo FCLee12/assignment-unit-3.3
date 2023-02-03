@@ -41,7 +41,7 @@ for(let i = 0; i < supplyChanges.length; i++) {
     } else if(supplyChanges[i] === 0) {
         console.log('No Change');
     } else {
-        let trueValue = supplyChanges[i] * -1;
+        let trueValue = supplyChanges[i] * -1; //Code added to make the string make sense (can't remove negative parts)
         console.log(`Removed ${trueValue} parts`);
     }
 };
@@ -56,7 +56,7 @@ for(let item of supplyChanges) {
     } else if(item === 0) {
         console.log('No Change');
     } else {
-        let trueValue = item * -1;
+        let trueValue = item * -1; //Code added to make the string make sense (can't remove negative parts)
         console.log(`Removed ${trueValue} parts`);
     }
 };
@@ -64,6 +64,11 @@ for(let item of supplyChanges) {
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+let totalSupplies = 0;
+for(let item of supplyChanges) {
+    totalSupplies += item;
+};
+console.log(totalSupplies);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
